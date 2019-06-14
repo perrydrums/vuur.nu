@@ -1,0 +1,32 @@
+body {
+  background-color: gainsboro;
+}
+
+.question {
+  background-color: white;
+  border-radius: 3px;
+  padding: 20px;
+}
+.question__header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+.question__body {
+  display: flex;
+  flex-grow: 1;
+}
+.question__answer {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 20px;
+  justify-content: center;
+}
+.question__answer object {
+  height: 40px;
+}
+.question:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=questions.css.map */
