@@ -3,10 +3,18 @@ body {
   padding: 0;
 }
 
+h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 #wrapper {
   width: 100%;
   height: 100vh;
-  background-color: #d0021a;
+  background-color: cadetblue;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -26,6 +34,12 @@ body {
   border: 2px solid red;
 }
 
+#result {
+  margin-bottom: 50px;
+  border: none;
+  outline: none;
+}
+
 .file-input {
   width: 0.1px;
   height: 0.1px;
@@ -35,18 +49,34 @@ body {
   z-index: -1;
 }
 
-.file-input + label {
-  font-size: 1.25em;
-  font-weight: 700;
-  color: white;
-  background-color: black;
+.file-input + label, .button {
+  width: 150px;
+  height: 50px;
+
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+
+  font-family: "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  font-size: 1em;
+  color: cadetblue;
+  background-color: white;
   display: inline-block;
+
+  border: none !important;
 }
 
 .file-input:focus + label,
 .file-input + label:hover {
-  background-color: red;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .file-input + label * {
   pointer-events: none;
+}
+
+#send-button {
+  display: none;
 }
