@@ -20,7 +20,7 @@
       <span>Is de weg in de omgeving vrijgemaakt?</span>
     </div>
     <div class="question__body">
-      <div class="question__answer">
+      <div class="question__answer question__answer--correct">
         <span>JA</span>
       </div>
       <div class="question__answer question__answer--incorrect">
@@ -34,7 +34,7 @@
       <span>Zijn alle bewoners uit het huis?</span>
     </div>
     <div class="question__body">
-      <div class="question__answer">
+      <div class="question__answer question__answer--correct">
         <span>JA</span>
       </div>
       <div class="question__answer question__answer--incorrect">
@@ -48,7 +48,7 @@
       <span>Zijn de ramen open of gesloten?</span>
     </div>
     <div class="question__body">
-      <div class="question__answer">
+      <div class="question__answer question__answer--correct">
         <span>JA</span>
       </div>
       <div class="question__answer question__answer--incorrect">
@@ -58,10 +58,34 @@
   </div>
 
   <div class="question__button-container">
-    <button type="submit" class="question__submit">VERZENDEN</button>
+    <a href="../record">
+      <button type="submit" class="question__submit">VERZENDEN</button>
+    </a>
   </div>
 
 </div>
+
+<script>
+  greenButtons = document.querySelectorAll('.question__answer--correct');
+  redButtons = document.querySelectorAll('.question__answer--incorrect');
+
+  for (let i = 0; i < greenButtons.length; i ++) {
+    const green = greenButtons[i];
+    const red = redButtons[i];
+
+    green.addEventListener('click', () => {
+      green.classList.toggle('question__answer--correct-clicked');
+      red.classList.remove('question__answer--incorrect-clicked');
+    });
+
+    red.addEventListener('click', () => {
+      red.classList.toggle('question__answer--incorrect-clicked');
+      green.classList.remove('question__answer--correct-clicked');
+    });
+  }
+
+</script>
+
 </body>
 </html>
 

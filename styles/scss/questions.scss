@@ -26,18 +26,29 @@ body {
         justify-content: center;
         align-items: center;
         border-radius: 20px;
+        border: 2px white solid;
         width: 40%;
         height: 40px;
-        background-color: #5CBF71;
         color: white;
 
         object {
             height: 40px;
         }
 
-
         &--incorrect {
             background-color: #F94B4B;
+        }
+
+        &--correct {
+            background-color: #5CBF71;
+        }
+
+        &--correct-clicked {
+            border: 2px solid darkgreen;
+        }
+
+        &--incorrect-clicked {
+            border: 2px solid darkred;
         }
 
     }
