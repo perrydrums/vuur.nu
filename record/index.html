@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
   <div class="title"><h3>VIDEO OPNEMEN</h3></div>
-  <img id="result" style="width: 100vw; height: 400px;" />
+  <video id="result" style="width: 100vw; height: 400px;" autoplay loop></video>
   <input class="file-input"
          id="file"
          type="file"
@@ -28,7 +28,7 @@
   function readURL(input) {
     if (input.files && input.files[0]) {
       const reader = new FileReader();
-      reader.onload = e => {
+      reader.onloadend = e => {
         document.getElementById('result')
           .setAttribute('src', e.target.result);
       };
