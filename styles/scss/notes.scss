@@ -1,0 +1,42 @@
+.explanation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  border-radius: 15px;
+  padding: 15px 15px;
+  margin: 20px;
+}
+
+.notes {
+  margin: 20px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 15px;
+  height: 500px;
+  border: 2px solid #5CBF71;
+}
+
+.button {
+  &__container {
+    padding: 20px;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: #5CBF71;
+  }
+}
