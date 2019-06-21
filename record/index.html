@@ -10,6 +10,13 @@
   <title>Video opnemen</title>
 </head>
 <body>
+
+<div class="back-container">
+  <a href="../choices/index.html">
+    <img class="back-button" src="../images/left-arrow-01.png"/>
+  </a>
+</div>
+
 <div id="wrapper">
   <div class="title"><h3>VIDEO OPNEMEN</h3></div>
   <video id="result" style="width: 100vw; height: 400px;" autoplay loop></video>
@@ -21,7 +28,9 @@
          onchange="readURL(this);"
   >
   <label id="file-label" class="button" for="file">Opnemen</label>
-  <button id="send-button" class="send-button" onclick="send()">Verstuur</button>
+  <a href="../notes/index.html">
+    <button id="send-button" class="send-button" onclick="send()">Verstuur</button>
+  </a>
 </div>
 
 <script>

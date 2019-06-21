@@ -28,10 +28,22 @@ let map;
 
 function initMap() {
 
+  let myLatLng = {lat: 51.9170588, lng: 4.484828};
+
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: {lat: 51.9170588, lng: 4.484828},
+    zoom: 16,
+    center: myLatLng,
     mapTypeId: 'terrain'
+  });
+
+  let marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Map marker'
+  });
+
+  marker.addListener('click', function() {
+    window.location.replace("../vuur.nu/choices/index.html");
   });
 
   light.setMap(map);
