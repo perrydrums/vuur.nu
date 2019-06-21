@@ -38,6 +38,15 @@ button, .button {
   }
 }
 
+.back-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.back-button {
+  width: 20px;
+}
+
 .content {
   &__container {
     height: 100%;
