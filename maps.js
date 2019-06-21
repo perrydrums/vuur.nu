@@ -43,9 +43,8 @@ function initMap() {
   });
 
   marker.addListener('click', function() {
-    window.location.replace("../vuur.nu/choices/index.html");
+    window.location = '/choices';
   });
 
   light.setMap(map);
-
 }
