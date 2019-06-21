@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('../../font/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad', sans-serif;
   background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
 }
 
 .mapTitle {
@@ -54,6 +65,7 @@ button, .button {
 
 .title {
   text-align: center;
+  padding: 10px;
 
   h3 {
     font-size: 24px;

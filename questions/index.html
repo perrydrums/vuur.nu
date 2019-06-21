@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="title">
-  <h3>Vragen</h3>
+  <h3>VRAGEN</h3>
 </div>
 <div class="questions">
 
@@ -21,10 +21,10 @@
     </div>
     <div class="question__body">
       <div class="question__answer question__answer--correct">
-        <span>Ja</span>
+        <span>JA</span>
       </div>
-      <div class="question__answer question__answer--unsure">
-        <span>Nee</span>
+      <div class="question__answer question__answer--incorrect">
+        <span>NEE</span>
       </div>
     </div>
   </div>
@@ -35,10 +35,10 @@
     </div>
     <div class="question__body">
       <div class="question__answer question__answer--correct">
-        <span>Ja</span>
+        <span>JA</span>
       </div>
-      <div class="question__answer question__answer--unsure">
-        <span>Nee</span>
+      <div class="question__answer question__answer--incorrect">
+        <span>NEE</span>
       </div>
     </div>
   </div>
@@ -49,19 +49,43 @@
     </div>
     <div class="question__body">
       <div class="question__answer question__answer--correct">
-        <span>Ja</span>
+        <span>JA</span>
       </div>
-      <div class="question__answer question__answer--unsure">
-        <span>Nee</span>
+      <div class="question__answer question__answer--incorrect">
+        <span>NEE</span>
       </div>
     </div>
   </div>
 
   <div class="question__button-container">
-    <button type="submit" class="question__submit">Verzenden</button>
+    <a href="../record">
+      <button type="submit" class="question__submit">VERZENDEN</button>
+    </a>
   </div>
 
 </div>
+
+<script>
+  greenButtons = document.querySelectorAll('.question__answer--correct');
+  redButtons = document.querySelectorAll('.question__answer--incorrect');
+
+  for (let i = 0; i < greenButtons.length; i ++) {
+    const green = greenButtons[i];
+    const red = redButtons[i];
+
+    green.addEventListener('click', () => {
+      green.classList.toggle('question__answer--correct-clicked');
+      red.classList.remove('question__answer--incorrect-clicked');
+    });
+
+    red.addEventListener('click', () => {
+      red.classList.toggle('question__answer--incorrect-clicked');
+      green.classList.remove('question__answer--correct-clicked');
+    });
+  }
+
+</script>
+
 </body>
 </html>
 

@@ -11,13 +11,38 @@
 </head>
 <body>
 <div id="wrapper">
-  <button id="go" onclick="window.location.assign('go')">
-    Maak video
-  </button>
+  <div class="title"><h3>VIDEO OPNEMEN</h3></div>
+  <img id="result" style="width: 100vw; height: 400px;" />
+  <input class="file-input"
+         id="file"
+         type="file"
+         accept="video/*"
+         capture="camera"
+         onchange="readURL(this);"
+  >
+  <label id="file-label" class="button" for="file">Opnemen</label>
+  <button id="send-button" class="send-button" onclick="send()">Verstuur</button>
 </div>
 
 <script>
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = e => {
+        document.getElementById('result')
+          .setAttribute('src', e.target.result);
+      };
+      reader.readAsDataURL(input.files[0]);
 
+      document.getElementById('file-label').innerText = 'Opnieuw';
+      document.getElementById('file-label').style.display = 'none';
+      document.getElementById('send-button').style.display = 'inline-block';
+    }
+  }
+
+  function send() {
+    alert('We hebben de video ontvangen, dankjewel!');
+  }
 </script>
 </body>
 </html>
