@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('../../font/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad', sans-serif;
   background-color: #f7f7f7;
 }
 
