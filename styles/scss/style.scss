@@ -1,6 +1,6 @@
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 
 .mapTitle {
@@ -12,7 +12,7 @@ body {
 }
 
 button, .button {
-  background-color: #8BC34A;
+  background-color: #5CBF71;
   border: 0;
   color: #fff;
   outline: none;
@@ -34,7 +34,6 @@ button, .button {
     height: 100%;
     position: relative;
     width:100%;
-    background-color: #f7f7f7;
 
     &--inner {
       position: absolute;
