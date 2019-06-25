@@ -25,7 +25,6 @@ button {
   }
 }
 
-
 .content {
   &__container{
     justify-content: center;
@@ -36,3 +35,11 @@ button {
   }
 }
 
+.explanation {
+  width: 80%;
+  background-color: #F1F1F1;
+  border-radius: 15px;
+  padding: 15px 15px;
+  margin: 20px;
+  box-sizing: border-box;
+}
