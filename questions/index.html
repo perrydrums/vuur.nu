@@ -20,11 +20,14 @@
   <h3>VRAGEN</h3>
 </div>
 
+<div class="subtitle">
+  <span>Indien antwoord onbekend, vraag overslaan</span>
+</div>
 <div class="questions">
 
   <div class="question">
     <div class="question__header">
-      <span>Is de weg in de omgeving vrijgemaakt?</span>
+      <span>Kan het incident bereikt worden?</span>
     </div>
     <div class="question__body">
       <div class="question__answer question__answer--correct">
@@ -63,6 +66,31 @@
       </div>
     </div>
   </div>
+  <div class="question">
+    <div class="question__header">
+      <span>Zijn er slachtoffers bekend?</span>
+    </div>
+    <div class="question__body">
+      <div class="question__answer question__answer--correct">
+        <span id="question-check-yes">JA</span>
+      </div>
+      <div class="question__answer question__answer--incorrect">
+        <span id="question-check-no">NEE</span>
+      </div>
+    </div>
+    <div id="question-conditional">
+      <div class="subtitle subtitle--top">
+        <span>Aantal slachtoffers naar schatting</span>
+      </div>
+      <div class="question__extra" id="number-container">
+        <span class="question__extra--number">1</span>
+        <span class="question__extra--number">2-3</span>
+        <span class="question__extra--number">4-6</span>
+        <span class="question__extra--number">7-10</span>
+        <span class="question__extra--number">10+</span>
+      </div>
+    </div>
+  </div>
 
   <div class="question__button-container">
     <a href="../record">
@@ -75,6 +103,23 @@
 <script>
   greenButtons = document.querySelectorAll('.question__answer--correct');
   redButtons = document.querySelectorAll('.question__answer--incorrect');
+  numberButtons = document.querySelectorAll('.question__extra--number');
+  numberContainer = document.querySelector('#number-container');
+  checkYes = document.querySelector('#question-check-yes');
+  checkNo = document.querySelector('#question-check-no');
+  conditional = document.querySelector('#question-conditional');
+
+  checkNo.addEventListener('click', () => {
+    conditional.classList.add('question__hide');
+  });
+
+  numberContainer.addEventListener('click', e => {
+    for (let i = 0; i < numberButtons.length; i ++) {
+      const number = numberButtons[i];
+      number.classList.remove('question__extra--number--selected');
+    }
+    e.target.classList.add('question__extra--number--selected')
+  });
 
   for (let i = 0; i < greenButtons.length; i ++) {
     const green = greenButtons[i];
