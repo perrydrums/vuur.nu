@@ -38,6 +38,11 @@ button, .button {
   }
 }
 
+.button-link {
+  justify-content: center;
+  display: flex;
+}
+
 .back-container {
   position: absolute;
   z-index: 2;
@@ -56,9 +61,10 @@ button, .button {
     &--inner {
       position: absolute;
       bottom: 25px;
-      justify-content: center;
+      //justify-content: center;
       display: flex;
       width: 100%;
+      flex-direction: column;
     }
 
     &--home {
@@ -82,10 +88,12 @@ button, .button {
 }
 
 .explanation--home {
-  width: 80%;
-  background-color: #F1F1F1;
+  width: 90%;
+  //background-color: #F1F1F1;
   border-radius: 15px;
-  padding: 15px 15px;
-  margin: 20px;
   box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
 }
