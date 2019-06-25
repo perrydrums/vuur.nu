@@ -18,6 +18,12 @@
     </div>
 
     <div class="content__container">
+        <div class="location">
+            <span id="location--street"></span>
+            <span id="location--postal"></span>
+            <span id="location--city"></span>
+        </div>
+
         <div class="explanation">
             <span>Voorzie de brandweer met één of meerdere van de volgende informatie:</span>
         </div>
@@ -43,5 +49,15 @@
             </button>
         </a>
     </div>
+
+    <script>
+        const street = window.localStorage.getItem('location:street');
+        const postal = window.localStorage.getItem('location:postal');
+        const city = window.localStorage.getItem('location:city');
+
+        document.getElementById('location--street').innerText = street;
+        document.getElementById('location--postal').innerText = postal;
+        document.getElementById('location--city').innerText = city;
+    </script>
 </body>
 </html>

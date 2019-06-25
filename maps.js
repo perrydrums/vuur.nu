@@ -1,12 +1,8 @@
-let light;
-
-let map;
-
 function initMap() {
 
   let myLatLng = {lat: 51.9038695, lng: 4.4855031};
 
-  map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: myLatLng,
     mapTypeId: 'terrain'
@@ -21,6 +17,9 @@ function initMap() {
   });
 
   marker.addListener('click', function() {
+    window.localStorage.setItem('location:street', 'Wilhelminakade 947');
+    window.localStorage.setItem('location:postal', '3072 AP');
+    window.localStorage.setItem('location:city', 'Rotterdam');
     window.location = '/choices';
   });
 
@@ -32,8 +31,9 @@ function initMap() {
   });
 
   marker2.addListener('click', function() {
+    window.localStorage.setItem('location:street', 'Otto Reuchlinweg 1004');
+    window.localStorage.setItem('location:postal', '3072 MD');
+    window.localStorage.setItem('location:city', 'Rotterdam');
     window.location = '/choices';
   });
-
-  light.setMap(map);
 }
